@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siteweb</title>
+    <style>
+        body {
+            display: flex;
+            background-color: gray;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: #ecf0f1;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #34495e;
+        }
+
+        .content {
+            margin-left: 240px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            overflow-y: auto;
+            height: calc(100vh - 20px);
+        }
+
+        table {
+            width: 100%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: aqua;
+        }
+
+        a {
+            display: inline-block;
+            background-color: aqua;
+            color: black;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: darkcyan;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+                margin-top: 20px;
+                padding: 10px;
+                height: auto; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar h2,
+            .sidebar a {
+                text-align: center;
+            }
+
+            a {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2 style="text-align: center;">Menu</h2>
+        <a href="index.html">Home</a>
+        <a href="curriculo.html">Curriculo</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="https://github.com/Gustavo-Giuberti" target="_blank">GitHub</a>
+        <a href="#Valores">Valores</a>
+        <a href="video.html">video</a>
+    </div>
+
+    <div class="content">
+        <header style="background-color: aqua; font-family: 'Courier New', Courier, monospace; border-color: black;">
+            <h1 style="text-align: center;">Gustavo Giuberti Bonato</h1>
+        </header>
+
+        <img src="Gustavo.jpg" alt="" width="150">
+
+        <h2>ONDE ESTUDEI?</h2>
+        <p style="text-align: justify;">Estudei em Colatina, na escola Geraldo Vargas Nogueira e finalizei meu ensino
+            médio no Hunney Everest em Cariacica. Em paralelo à escola fiz alguns cursos, como Informática Avançada,
+            Designer e Manutenção de Software, e hoje estudo o curso de Ciência da Computação na UVV.</p>
+        <h3>Cursos em que estou cursando:</h3>
+        <ol type="1" start="1">
+            <li>Textos Científicos: Aspectos Metodológicos e Linguísticos</li>
+            <li>Construção de Software para Web</li>
+            <li>Design e Desenvolvimento de Banco de Dados I</li>
+            <li>Experiência e Interface com o Usuário</li>
+            <li>Lógica para Computação</li>
+            <li>Fundamentos de Tecnologia da Computação</li>
+        </ol>
+
+        <h2>CARREIRA PROFISSIONAL:</h2>
+        <p>Com 16 anos, comecei a trabalhar na empresa Promax, uma distribuidora de produtos de limpeza. Depois
+            trabalhei fazendo entregas de eletrodomésticos, e atualmente trabalho em uma oficina de caminhões chamada
+            Zacarias Diesel. No futuro, pretendo ser um bom programador.</p>
+        <p><a href="curriculo.html">Acessar currículo</a></p>
+
+        <h2>HOBBY'S</h2>
+        <p>Tenho como principal hobby jogar, assistir filmes e séries.</p>
+
+        <hr>
+
+        <h1>Quem somos?</h1>
+        <p>Somos uma empresa focada na criação de sites, com foco na experiência do usuário, intuitividade e
+            acessibilidade. Oferecemos vários modelos de sites e estilos, de acordo com seu gosto, para sua maior
+            satisfação.</p>
+
+        <h1>Exemplo de modelos de empresa que podem usar nossos serviços:</h1>
+
+        <ol start="1" type="1">
+            <li>Restaurantes</li>
+            <li>Academias</li>
+            <li>Livrarias</li>
+            <li>Cafeterias</li>
+            <li>Lojas de roupas</li>
+            <li>Lojas de autopeças</li>
+        </ol>
+
+        <h2>Nossos Serviços</h2>
+        <table id="Valores">
+            <tr>
+                <th>Serviço</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>HomePage</td>
+                <td>Desenvolvimento de uma página estática em HTML e CSS</td>
+                <td>R$ 500,00</td>
+            </tr>
+            <tr>
+                <td>Página Dinâmica</td>
+                <td>Desenvolvimento de uma página dinâmica com interações JavaScript</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+            <tr>
+                <td>Super Avançada</td>
+                <td>Desenvolvimento de um sistema completo, com banco de dados e funcionalidades avançadas</td>
+                <td>R$ 3.000,00</td>
+            </tr>
+        </table>
+
+        <a href="cadastro.html">FAÇA SEU CADASTRO</a>
+    </div>
+</body>
+
+</html>
